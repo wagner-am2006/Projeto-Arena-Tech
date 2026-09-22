@@ -6,7 +6,7 @@ int main(void) {
     int participantes, jogadoresPorTime, computadores;
     float potencia, duracao, precoKwh, precoKit, outrosCustos;
     
-    float timesNecessarios;
+    int timesNecessarios;
     float consumoEnergia, custoEnergia, custoAlimentacao, custoTotal, custoPorParticipante;
 
     // Solicitação e leitura dos dados de entrada
@@ -34,7 +34,7 @@ int main(void) {
     printf("Digite os outros custos (R$): ");
     scanf("%f", &outrosCustos);
     
-    timesNecessarios = ceil(participantes)/jogadoresPorTime;
+    timesNecessarios = ceil((float)participantes / jogadoresPorTime);
     consumoEnergia = (computadores * potencia * duracao) / 1000;
     custoEnergia = consumoEnergia * precoKwh;
     custoAlimentacao = participantes * precoKit;
@@ -42,8 +42,15 @@ int main(void) {
     custoPorParticipante = custoTotal / participantes;
     
     // Saída dos dados, todos calculados 
-    printf("==========Arena Tech===========\n");
-
-
+    printf ("========== ARENA TECH ==========\n");
+    printf ("Participantes: %d\n", participantes);
+    printf ("Times necessários: %d\n", timesNecessarios);
+    printf ("Consumo estimado: %.2f kWh\n", consumoEnergia);
+    printf ("Custo da energia: R$ %.2f\n", custoEnergia);
+    printf ("Custo da alimentação: R$ %.2f\n", custoAlimentacao);
+    printf ("Outros custos: R$ %.2f\n", outrosCustos);
+    printf ("CUSTO TOTAL: R$ %.2f\n", custoTotal);
+    printf ("CUSTO POR PARTICIPANTE: R$ %.2f\n", custoPorParticipante);
+    printf ("=================================\n");
     return 0;
 }
