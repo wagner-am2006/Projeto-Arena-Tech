@@ -1,9 +1,8 @@
 # Projeto-Arena-Tech
 
 Participantes do projeto:
-
-Maria Eduarda Flausino Alves - RGM: 
-Wagner Alves Moreira - RGM: 47547821
+-Maria Eduarda Flausino Alves - RGM: 
+-Wagner Alves Moreira - RGM: 47547821
 
 ### Explicação da Solução - Arena Tech
 
