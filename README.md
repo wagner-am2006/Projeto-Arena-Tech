@@ -32,11 +32,4 @@ O programa foi desenvolvido em **linguagem C** com o objetivo de automatizar a e
 - **Linguagem:** C
 - **Bibliotecas:** `<stdio.h>`, `<math.h>`
 
-### Como compilar e executar no terminal (Linux / Codespaces):
 
-```bash
-# Compilação (o parâmetro -lm carrega a biblioteca math.h)
-gcc projeto1_arena_tech.c -o projeto1 -lm
-
-# Execução
-./projeto1
