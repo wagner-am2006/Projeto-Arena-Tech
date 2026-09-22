@@ -1,0 +1,54 @@
+Algoritmo PlanejadorArenaTech
+
+Variaveis
+    participantes, jogadoresPorTime, computadores: inteiro
+    potencia, duracao, precoKwh, precoKit, outrosCustos: real
+    timesNecessarios, consumoEnergia, custoEnergia: real
+    custoAlimentacao, custoTotal, custoPorParticipante: real
+
+Inicio
+    // Entrada de Dados
+    Escreva("Digite a quantidade de participantes: ")
+    Leia(participantes)
+    
+    Escreva("Digite a quantidade de jogadores por time: ")
+    Leia(jogadoresPorTime)
+    
+    Escreva("Digite a quantidade de computadores: ")
+    Leia(computadores)
+    
+    Escreva("Digite a potência dos computadores (W): ")
+    Leia(potencia)
+    
+    Escreva("Digite a duração do evento (horas): ")
+    Leia(duracao)
+    
+    Escreva("Digite o preço do kWh: ")
+    Leia(precoKwh)
+    
+    Escreva("Digite o preço do kit de alimentação: ")
+    Leia(precoKit)
+    
+    Escreva("Digite os outros custos: ")
+    Leia(outrosCustos)
+
+    // Processamento / Cálculos
+    timesNecessarios <- ArredondarParaCima(participantes / jogadoresPorTime)
+    consumoEnergia <- (computadores * potencia * duracao) / 1000
+    custoEnergia <- consumoEnergia * precoKwh
+    custoAlimentacao <- participantes * precoKit
+    custoTotal <- custoEnergia + custoAlimentacao + outrosCustos
+    custoPorParticipante <- custoTotal / participantes
+
+    // Saída de Dados
+    Escreva("========== ARENA TECH ==========")
+    Escreva("Participantes: ", participantes)
+    Escreva("Times necessários: ", timesNecessarios)
+    Escreva("Consumo estimado: ", consumoEnergia, " kWh")
+    Escreva("Custo da energia: R$ ", custoEnergia)
+    Escreva("Custo da alimentação: R$ ", custoAlimentacao)
+    Escreva("Outros custos: R$ ", outrosCustos)
+    Escreva("CUSTO TOTAL: R$ ", custoTotal)
+    Escreva("CUSTO POR PARTICIPANTE: R$ ", custoPorParticipante)
+    Escreva("================================")
+FimAlgoritmo
