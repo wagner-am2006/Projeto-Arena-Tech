@@ -1,16 +1,42 @@
-# Projeto-Arena-Tech
+# Projeto Arena Tech — Planejador de Maratona Gamer
 
-Participantes do projeto:
--Maria Eduarda Flausino Alves - RGM: 
--Wagner Alves Moreira - RGM: 47547821
+> **Projeto 1** da disciplina de Algoritmos e Pensamento Computacional  
+> **Professor:** Vinicius Alves  
 
-### Explicação da Solução - Arena Tech
+---
 
-O programa foi desenvolvido em linguagem C para ajudar na organização dos custos do evento. 
-Primeiro, solicitamos e lemos os dados de entrada informados pelo usuário, como quantidade de participantes, computadores, potência e preços. 
-Em seguida, realizamos os cálculos aritméticos do evento:
-- Calculamos a quantidade de times dividindo o total de participantes pelo limite por time, usando a função `ceil()` para arredondar para cima.
-- O consumo de energia foi calculado multiplicando computadores, potência e horas de duração, convertendo para kWh ao dividir por 1000.
-- Calculamos os custos de energia, alimentação e o custo total somando todas as despesas.
-- Por fim, dividimos o custo total pelo número de participantes para obter o valor por pessoa.
-O programa exibe na tela um relatório limpo e organizado com os resultados formatados em duas casas decimais.
+## Integrantes do Grupo
+
+- **Maria Eduarda Flausino Alves** — *RGM:* `49177681`
+- **Wagner Alves Moreira** — *RGM:* `47547821`
+
+---
+
+## Descrição da Solução
+
+O programa foi desenvolvido em **linguagem C** com o objetivo de automatizar a estimativa e a organização dos custos do evento **Arena Tech**.
+
+### Como Funciona:
+1. **Entrada de Dados:** O sistema solicita e lê as informações essenciais digitadas pelo usuário (quantidade de participantes, número de computadores, potência das máquinas, duração do evento e valores monetários).
+2. **Processamento e Cálculos:**
+   - **Times Necessários:** Divisão dos participantes pelos jogadores por time, utilizando a função `ceil()` para arredondar para cima (garantindo que times incompletos sejam contabilizados).
+   - **Consumo de Energia (kWh):** Calculado a partir da multiplicação de computadores, potência em Watts e horas de uso, dividido por `1000`.
+   - **Custos:** Cálculo individual do custo de energia e alimentação, somado aos demais custos fixos para obter o **Custo Total**.
+   - **Custo por Participante:** Divisão do custo total pelo número total de participantes.
+3. **Relatório Final:** Exibição clara e organizada de todas as métricas calculadas com formatação de duas casas decimais para valores financeiros.
+
+---
+
+## Tecnologias e Compilação
+
+- **Linguagem:** C
+- **Bibliotecas:** `<stdio.h>`, `<math.h>`
+
+### Como compilar e executar no terminal (Linux / Codespaces):
+
+```bash
+# Compilação (o parâmetro -lm carrega a biblioteca math.h)
+gcc projeto1_arena_tech.c -o projeto1 -lm
+
+# Execução
+./projeto1
